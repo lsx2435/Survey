@@ -3,5 +3,4 @@ pypfopt
 matplotlib
 bt
 streamlit
-bt
 pyauotogui
