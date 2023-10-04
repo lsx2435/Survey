@@ -1,5 +1,5 @@
 pandas
-pypfopt
+pypfopt==1.5.5
 matplotlib
 bt
 streamlit
