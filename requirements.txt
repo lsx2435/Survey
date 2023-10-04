@@ -2,6 +2,3 @@ pandas
 matplotlib
 bt
 streamlit
-pyauotogui==0.9.54
-pypfopt==1.5.5
-
