@@ -82,13 +82,13 @@ if submitted:
         t.allocation_plot()
         s = t.port.index.values.tolist()
         k = t.port.values.tolist()
-        fig = plt.figure(figsize=(15,5))
         font_dirs = '/customFonts'
         font_files = fm.findSystemFonts(fontpaths=font_dirs)
         for font_file in font_files:
             fm.fontManager.addfont(font_file)
         #plt.rcParmas['font.family'] = 'Nanum Brush Script OTF'
         plt.rc('NanumGothic')
+        fig = plt.figure(figsize=(15,5))
         plt.bar(s,k)
         st.pyplot(fig)
 
