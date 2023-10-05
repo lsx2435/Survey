@@ -5,4 +5,3 @@ streamlit
 PyPortfolioOpt
 future
 openpyxl
-requests
