@@ -4,3 +4,4 @@ bt
 streamlit
 PyPortfolioOpt
 future
+openpyxl
