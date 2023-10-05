@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import bt
 import matplotlib.pyplot as plt
-import pyautogui
 from riskprofile import RiskQuestionnaire
 
 st.set_page_config(initial_sidebar_state="collapsed")
