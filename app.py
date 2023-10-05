@@ -85,7 +85,6 @@ if submitted:
         fig = plt.figure(figsize=(15,5))
         font_dirs = '/customFonts'
         font_files = fm.findSystemFonts(fontpaths=font_dirs)
-        font_files = fm.findSystemFonts(fontpaths=font_dirs)
         for font_file in font_files:
             fm.fontManager.addfont(font_file)
         #plt.rcParmas['font.family'] = 'Nanum Brush Script OTF'
