@@ -92,12 +92,12 @@ if submitted:
                                                                     "글로벌 하이일드 회사채",  "신흥국채권", "현금성자산"], index_col = 0 )
         df.sort_index(inplace=True)
     
-        s = bt.Strategy("추천 포트폴리오", [bt.algos.RunMonthly(),
+        s = bt.Strategy("Recommended Portfolio", [bt.algos.RunMonthly(),
                             bt.algos.SelectAll(),
                            bt.algos.WeighSpecified(**weight),
                             bt.algos.Rebalance()])
                             #bt.algos.WeighSpecified(**weight)])
-        e = bt.Strategy("동일가중 벤치마크", [bt.algos.RunMonthly(),
+        e = bt.Strategy("Equal Weight Benchmark", [bt.algos.RunMonthly(),
                             bt.algos.SelectAll(),
                            bt.algos.WeighEqually(),
                             bt.algos.Rebalance()])
