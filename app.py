@@ -26,6 +26,7 @@ fm._load_fontmanager(try_read_cache=False)
 plt.rcParams['font.family'] = "NanumGothic"
 plt.rcParams['axes.unicode_minus'] = False
 mpl.rc('font', family="NanumGothic")
+plt.rc('font', family="NanumGothic")
 mpl.rcParams['axes.unicode_minus'] = False
 
 riskQuestionFile = "RiskQuestion.xlsx"
