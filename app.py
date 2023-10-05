@@ -87,7 +87,7 @@ if submitted:
         for font_file in font_files:
             fm.fontManager.addfont(font_file)
         #plt.rcParmas['font.family'] = 'Nanum Brush Script OTF'
-        plt.rc('NanumGothic')
+        plt.rcParams['font.family'] = "NanumGothic"
         fig = plt.figure(figsize=(15,5))
         plt.bar(s,k)
         st.pyplot(fig)
