@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import bt
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 from riskprofile import RiskQuestionnaire
 
 st.set_page_config(initial_sidebar_state="collapsed")
@@ -82,7 +83,13 @@ if submitted:
         s = t.port.index.values.tolist()
         k = t.port.values.tolist()
         fig = plt.figure(figsize=(15,5))
+        font_dirs = '/customFonts'
+        font_files = fm.findSystemFonts(fontpaths=font_dirs)
+        font_files = fm.findSystemFonts(fontpaths=font_dirs)
+        for font_file in font_files:
+            fm.fontManager.addfont(font_file)
         #plt.rcParmas['font.family'] = 'Nanum Brush Script OTF'
+        plt.rc('NanumGothic')
         plt.bar(s,k)
         st.pyplot(fig)
 
