@@ -88,7 +88,7 @@ if submitted:
         st.text("월간 리밸런싱했다는 가정하에, ")
         st.text("2001년 9월부터 해당 포트폴리오에 투자했을 시 수익률 그래프는 아래와 같습니다")
 
-        df = pd.read_excel("ASSETS.xlsx", skiprows=5, header=None, names = ["date", "북미 주식", "북미외 선진국 주식", "신흥국 주식", "글로벌 국채", "글로벌 투자등급 회사채", 
+        df = pd.read_excel("ASSETS.XLSX", skiprows=5, header=None, names = ["date", "북미 주식", "북미외 선진국 주식", "신흥국 주식", "글로벌 국채", "글로벌 투자등급 회사채", 
                                                                     "글로벌 하이일드 회사채",  "신흥국채권", "현금성자산"], index_col = 0 )
         df.sort_index(inplace=True)
     
