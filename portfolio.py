@@ -4,12 +4,15 @@ class portfolio:
 
     def object(self,vol):
         import pandas as pd 
+        import requests
         from pypfopt.efficient_frontier import EfficientFrontier
         from pypfopt import risk_models
         from pypfopt import expected_returns
         from pypfopt import objective_functions
 
-        df = pd.read_excel("ASSETS.xlsx", skiprows=5, header=None, names = ["date", "북미 주식", "북미외 선진국 주식", "신흥국 주식", "글로벌 국채", "글로벌 투자등급 회사채", 
+        url= 'https://gitlab.com/lsx2435/Survey/-/raw/master/ASSETS.xlsx'
+        myfile = requests.get(url)
+        df = pd.read_excel(myfile, header=None, names = ["date", "북미 주식", "북미외 선진국 주식", "신흥국 주식", "글로벌 국채", "글로벌 투자등급 회사채", 
                                                                     "글로벌 하이일드 회사채",  "신흥국채권", "현금성자산"], index_col = 0 )
         df.sort_index(inplace=True)
         #df_return = df.pct_change().dropna()
