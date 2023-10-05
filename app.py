@@ -82,7 +82,7 @@ if submitted:
         s = t.port.index.values.tolist()
         k = t.port.values.tolist()
         fig = plt.figure(figsize=(15,5))
-        plt.rcParmas['font.family'] = 'Malgun Gothic'
+        plt.rcParmas['font.family'] = 'Nanum Brush Script OTF'
         plt.bar(s,k)
         st.pyplot(fig)
 
