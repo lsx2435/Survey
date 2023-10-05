@@ -117,4 +117,4 @@ if submitted:
 if st.session_state.confirmation:
     st.session_state.reset = st.button("성향조사 다시 하기")
     if st.session_state.reset:
-        pyautogui.hotkey("ctrl", "F5")
+        st.experimental_rerun()
