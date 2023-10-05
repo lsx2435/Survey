@@ -26,7 +26,6 @@ fm._load_fontmanager(try_read_cache=False)
 plt.rcParams['font.family'] = "NanumGothic"
 plt.rcParams['axes.unicode_minus'] = False
 mpl.rc('font', family="NanumGothic")
-plt.rc('font', family="NanumGothic")
 mpl.rcParams['axes.unicode_minus'] = False
 
 riskQuestionFile = "RiskQuestion.xlsx"
@@ -95,8 +94,10 @@ if submitted:
         t.allocation_plot()
         s = t.port.index.values.tolist()
         k = t.port.values.tolist()
-        fig = plt.figure(figsize=(15,5))
-        plt.bar(s,k)
+        plt.rc('font', family="NanumGothic")
+        fig, ax = plt.subplots(figsize=(15,5))
+        #fig = plt.figure(figsize=(15,5))
+        ax.bar(s,k)
         st.pyplot(fig)
 
         st.text("월간 리밸런싱했다는 가정하에, ")
