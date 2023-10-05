@@ -52,7 +52,7 @@ class portfolio:
     def backtest(self):
         import pandas as pd
         import bt
-        df = pd.read_excel("ASSETS.xlsx", skiprows=5, header=None, names = ["date", "북미 주식", "북미외 선진국 주식", "신흥국 주식", "글로벌 국채", "글로벌 투자등급 회사채", 
+        df = pd.read_excel("ASSETS.XLSX", skiprows=5, header=None, names = ["date", "북미 주식", "북미외 선진국 주식", "신흥국 주식", "글로벌 국채", "글로벌 투자등급 회사채", 
                                                                     "글로벌 하이일드 회사채",  "신흥국채권", "초단기채"], index_col = 0 )
         df.sort_index(inplace=True)
         s = bt.Strategy("s", [bt.algos.RunMonthly(),
