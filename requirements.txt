@@ -3,3 +3,4 @@ matplotlib
 bt
 streamlit
 PyPortfolioOpt
+future
