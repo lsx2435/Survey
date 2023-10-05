@@ -3,6 +3,7 @@ import pandas as pd
 import bt
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
+import matplotlib as mpl
 from riskprofile import RiskQuestionnaire
 
 st.set_page_config(initial_sidebar_state="collapsed")
@@ -87,8 +88,11 @@ if submitted:
         for font_file in font_files:
             fm.fontManager.addfont(font_file)
         #plt.rcParmas['font.family'] = 'Nanum Brush Script OTF'
+        fm._load_fontmanager(try_read_cache=False)
         plt.rcParams['font.family'] = "NanumGothic"
         plt.rcParams['axes.unicode_minus'] = False
+        mpl.rc('font', family="NanumGothic")
+        mpl.rcParams['axes.unicode_minus'] = False
         fig = plt.figure(figsize=(15,5))
         plt.bar(s,k)
         st.pyplot(fig)
